@@ -18,7 +18,7 @@ const links = [
   },
   {
     href: "#",
-    label: "Case Study",
+    label: "Company",
   },
   {
     href: "#",
@@ -50,7 +50,7 @@ const Header = () => {
           <Link
             className="flex items-center gap-2 shrink-0 "
             href="/"
-            title={`${config.appName} hompage`}
+            title={'hompage'}
           >
             {/* <Image
               // src={logo}

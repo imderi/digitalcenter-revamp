@@ -4,40 +4,12 @@ import { useRef, useState } from "react";
 
 const listData = [
   {
-    question:
-      "Empowering Professional Excellence through Transformative Design",
-    answer: (
-      <div className="space-y-2 leading-relaxed">
-        stands at the intersection of innovation and professionalism, shaping
-        the future of business operations through transformative design.
-      </div>
-    ),
+    question: "Title 1",
+    answer: <div className="space-y-2 leading-relaxed">Desc</div>,
   },
   {
-    question: "Refining Workflows with Aesthetic Functionality",
-    answer: (
-      <div className="space-y-2 leading-relaxed">
-        with an acute understanding of professional demands, we create solutions
-        that streamline operations, foster productivity, and redefine the
-        elegance of efficiency.
-      </div>
-    ),
-  },
-  {
-    question: "Architecting Digital Elegance, Advancing Professionalism",
-    answer: (
-      <div className="space-y-2 leading-relaxed">
-        Our ethos is founded on crafting digital experiences that embody elegance and advance professionalism.
-      </div>
-    ),
-  },
-  {
-    question: "Engineering Precision, Designing Success",
-    answer: (
-      <div className="space-y-2 leading-relaxed">
-        We believe that through expertly engineered design, we can transform everyday business tasks into seamless, successful outcomes, ensuring that professionalism is not just maintained but enhanced.
-      </div>
-    ),
+    question: "Title 2",
+    answer: <div className="space-y-2 leading-relaxed">Desc</div>,
   },
 ];
 
@@ -100,17 +72,16 @@ const ListItem = ({ item }) => {
   );
 };
 
-const Expertise = () => {
+const Processing = () => {
   return (
-    <section className="bg-base-200" id="expertise">
+    <section className="bg-base-200" id="processing">
       <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
         <div className="flex flex-col text-left basis-1/2">
           <p className="inline-block font-semibold text-primary mb-4">
-            Expertise
+            Processing
           </p>
           <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
-            With more than 3+ years of experience, our team has become expert in
-            digital Transformations.
+            How we work
           </p>
         </div>
         <ul className="basis-1/2">
@@ -123,4 +94,4 @@ const Expertise = () => {
   );
 };
 
-export default Expertise;
+export default Processing;
