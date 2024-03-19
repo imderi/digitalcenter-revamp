@@ -1,94 +1,64 @@
-"use client";
+import Image from "next/image";
 
-import { useRef, useState } from "react";
-
-const listData = [
+const logoList = [
   {
-    question: "Title 1",
-    answer: <div className="space-y-2 leading-relaxed">Desc</div>,
+    href: "https://digitalcenter.id/wp-content/uploads/2022/12/1-4-1.png", // Corrected URL
+    label: "Logo 1",
+    title: "Teamwork",
+    desc: "Providing the best results is a lengthy process that requires cooperation",
   },
   {
-    question: "Title 2",
-    answer: <div className="space-y-2 leading-relaxed">Desc</div>,
+    href: "https://digitalcenter.id/wp-content/uploads/2022/12/2-5-1.png",
+    label: "Logo 2",
+    title: "Problem Solvers",
+    desc: "Always giving you the newest ideas and information that fits your needs",
+  },
+  {
+    href: "https://digitalcenter.id/wp-content/uploads/2022/12/3-5-1.png",
+    label: "Logo 3",
+    title: "Offer Solutions",
+    desc: "ensuring that you achieve the desired outcomes effectively and efficiently.",
   },
 ];
 
-const ListItem = ({ item }) => {
-  const accordion = useRef(null);
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <li>
-      <button
-        className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
-        onClick={(e) => {
-          e.preventDefault();
-          setIsOpen(!isOpen);
-        }}
-        aria-expanded={isOpen}
-      >
-        <span
-          className={`flex-1 text-base-content ${isOpen ? "text-primary" : ""}`}
-        >
-          {item?.question}
-        </span>
-        <svg
-          className={`flex-shrink-0 w-4 h-4 ml-auto fill-current`}
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            y="7"
-            width="16"
-            height="2"
-            rx="1"
-            className={`transform origin-center transition duration-200 ease-out ${
-              isOpen && "rotate-180"
-            }`}
-          />
-          <rect
-            y="7"
-            width="16"
-            height="2"
-            rx="1"
-            className={`transform origin-center rotate-90 transition duration-200 ease-out ${
-              isOpen && "rotate-180 hidden"
-            }`}
-          />
-        </svg>
-      </button>
-      <div
-        ref={accordion}
-        className={`transition-all duration-300 ease-in-out opacity-80 overflow-hidden`}
-        style={
-          isOpen
-            ? { maxHeight: accordion?.current?.scrollHeight, opacity: 1 }
-            : { maxHeight: 0, opacity: 0 }
-        }
-      >
-        <div className="pb-5 leading-relaxed">{item?.answer}</div>
-      </div>
-    </li>
-  );
-};
-
 const Processing = () => {
   return (
-    <section className="bg-base-200" id="processing">
-      <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
-        <div className="flex flex-col text-left basis-1/2">
-          <p className="inline-block font-semibold text-primary mb-4">
-            Processing
-          </p>
-          <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
-            How we work
-          </p>
+    <section className="bg-base-100">
+      <div className="py-10 relative bg-white sm:py-16 lg:py-24 lg:pt-24">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="inline-block font-semibold text-primary mb-4">
+              Processing
+            </p>
+            <p className="sm:text-4xl text-4xl font-extrabold text-base-content">
+              How we work
+            </p>
+            <p className="text-lg opacity-80 leading-relaxed">
+              Find out how the digital center can help you work together.
+            </p>
+          </div>
+          <div className="grid items-center max-w-4xl grid-cols-1 gap-4 mx-auto mt-12 md:mt-20 md:grid-cols-3">
+            {logoList.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center"
+              >
+                <Image
+                  src={item.href}
+                  alt={item.label}
+                  width={125}
+                  height={125}
+                />
+                  <p className="sm:text-xl text-xl font-extrabold text-base-content my-4">
+                    {item.title}
+                  </p>
+                  <p className="text-md opacity-80 leading-relaxed">
+                    {item.desc}
+                  </p>
+              </div>
+            ))}
+          </div>
         </div>
-        <ul className="basis-1/2">
-          {listData.map((item, i) => (
-            <ListItem key={i} item={item} />
-          ))}
-        </ul>
       </div>
     </section>
   );
