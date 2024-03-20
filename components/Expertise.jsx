@@ -27,7 +27,8 @@ const listData = [
     question: "Architecting Digital Elegance, Advancing Professionalism",
     answer: (
       <div className="space-y-2 leading-relaxed">
-        Our ethos is founded on crafting digital experiences that embody elegance and advance professionalism.
+        Our ethos is founded on crafting digital experiences that embody
+        elegance and advance professionalism.
       </div>
     ),
   },
@@ -35,7 +36,9 @@ const listData = [
     question: "Engineering Precision, Designing Success",
     answer: (
       <div className="space-y-2 leading-relaxed">
-        We believe that through expertly engineered design, we can transform everyday business tasks into seamless, successful outcomes, ensuring that professionalism is not just maintained but enhanced.
+        We believe that through expertly engineered design, we can transform
+        everyday business tasks into seamless, successful outcomes, ensuring
+        that professionalism is not just maintained but enhanced.
       </div>
     ),
   },
@@ -108,10 +111,14 @@ const Expertise = () => {
           <p className="inline-block font-semibold text-primary mb-4">
             Expertise
           </p>
-          <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
+          <p className="sm:text-3xl text-2xl font-extrabold text-base-content">
             With more than 3+ years of experience, our team has become expert in
             digital Transformations.
           </p>
+          <p className="text-md opacity-80 leading-relaxed my-3">
+            Grow brands through bold, strategic creative
+          </p>
+          <button className="btn btn-primary btn-wide my-8">Know More</button>
         </div>
         <ul className="basis-1/2">
           {listData.map((item, i) => (

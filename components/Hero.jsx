@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="max-w-7xl mx-auto bg-base-100 flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 px-8 py-8 lg:py-20">
+    <section className="max-w-7xl mx-auto bg-base-100 flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 px-8 py-4 lg:py-10">
       <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
-        <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4">
+        <h1 className="font-extrabold text-3xl lg:text-5xl tracking-tight md:-mb-4">
           Digital Center Indonesia
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
@@ -13,14 +13,13 @@ const Hero = () => {
         </p>
         <button className="btn btn-primary btn-wide">Get To Know More</button>
       </div>
-      <div className="lg:w-full">
+      <div className="lg:w-full flex justify-center items-center">
         <Image
-          src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80"
-          alt="Product Demo"
-          className="w-full"
+          src="https://digitalcenter.id/wp-content/uploads/2022/12/hero-4-1.png"
+          alt="Hero Image"
           priority={true}
-          width={500}
-          height={500}
+          width={450}
+          height={450}
         />
       </div>
     </section>

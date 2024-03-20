@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-// import Image from "next/image";
-// import logo from "@/app/icon.png";
+import Image from "next/image";
 import config from "@/config";
 
 const links = [
@@ -50,16 +49,19 @@ const Header = () => {
           <Link
             className="flex items-center gap-2 shrink-0 "
             href="/"
-            title={'hompage'}
+            title={"hompage"}
           >
-            {/* <Image
-              // src={logo}
-              alt={`${config.appName} logo`}
-              className="w-8"
-              placeholder="blur"
-              priority={true}
-            /> */}
-            <span className="font-extrabold text-lg">{config.appName}</span>
+            <Image
+              src={
+                "https://digitalcenter.id/wp-content/uploads/2023/10/Logo-web-DCT-Footer.webp"
+              }
+              alt="logo"
+              width={150}
+              height={100}
+              priority
+              className="cursor-pointer"
+            />
+            {/* <span className="font-extrabold text-lg">{config.appName}</span> */}
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -113,14 +115,17 @@ const Header = () => {
               title={`${config.appName} hompage`}
               href="/"
             >
-              {/* <Image
-                // src={logo}
-                alt={`${config.appName} logo`}
-                className="w-8"
-                placeholder="blur"
-                priority={true}
-              /> */}
-              <span className="font-extrabold text-lg">{config.appName}</span>
+              <Image
+                src={
+                  "https://digitalcenter.id/wp-content/uploads/2023/10/Logo-web-DCT-Footer.webp"
+                }
+                alt="logo"
+                width={150}
+                height={100}
+                priority
+                className="cursor-pointer"
+              />
+              {/* <span className="font-extrabold text-lg">{config.appName}</span> */}
             </Link>
             <button
               type="button"

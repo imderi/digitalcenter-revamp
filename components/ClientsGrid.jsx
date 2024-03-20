@@ -73,7 +73,7 @@ const ClientsGrid = () => {
       <div className="py-10 relative bg-white sm:py-16 lg:py-24 lg:pt-24">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto text-center">
-            <p className="sm:text-4xl text-4xl font-extrabold text-base-content">
+            <p className="sm:text-2xl text-3xl font-extrabold text-base-content">
               WE WORKED WITH GLOBAL LARGEST BRANDS
             </p>
           </div>

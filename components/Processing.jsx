@@ -30,7 +30,7 @@ const Processing = () => {
             <p className="inline-block font-semibold text-primary mb-4">
               Processing
             </p>
-            <p className="sm:text-4xl text-4xl font-extrabold text-base-content">
+            <p className="sm:text-2xl text-3xl font-extrabold text-base-content">
               How we work
             </p>
             <p className="text-lg opacity-80 leading-relaxed">
